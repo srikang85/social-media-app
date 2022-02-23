@@ -1,0 +1,28 @@
+{
+  "root": "apps/social-media-e2e",
+  "sourceRoot": "apps/social-media-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/social-media-e2e/cypress.json",
+        "devServerTarget": "social-media:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "social-media:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/social-media-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["social-media"]
+}

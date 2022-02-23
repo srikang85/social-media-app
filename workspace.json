@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "social-media": "apps/social-media",
+    "social-media-e2e": "apps/social-media-e2e"
+  }
+}
